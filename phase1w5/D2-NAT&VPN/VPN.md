@@ -1,0 +1,7 @@
+主要功能就是將明文傳輸的資料加密，隱藏IP，跨越地區並且防止ISP追蹤
+
+作法上就是我的裝置會先連到一個concentrator，他會負責幫我做加解密的動作，我本地資料的加密會經由軟體處理，送到concentrator再作解密，而這中間的傳輸就可以走公共的網路，反向的時候也就反過來做:concentrator加密local軟體解密
+
+另外也有一種client less VPN，例如說HTML5，本身就有提供加密的API也可以做到類似的事情
+
+連線的方式分成full tunnel跟split tunnel，就是有沒有全部的流量都走VPN而已

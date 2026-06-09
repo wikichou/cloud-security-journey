@@ -1,0 +1,13 @@
+把service直接弄爆的攻擊，通常是直接大量request讓那個service直接down掉
+
+最簡單的防禦方式就是保持更新
+
+ex.
+networkDOS /BandWithDOS /physical attack
+
+DDOS則是多點同時攻擊，可以用殭屍網路達到這種攻擊方式，而且這種攻擊是非對稱的，攻擊者只要用少少的資源就可以癱瘓service
+
+DDOS reflection/amplification
+用特定的服務加大資訊量，變相就是說我小小一個封包可以用特定的手段曾大好幾倍甚至幾百倍
+
+ex.DNS server收到 dig any的時候會回傳所有資訊，我可以用殭屍網路內的所有裝置都向DNS server送，這之中我會偽造我的source IP成我要攻擊的目標，這樣一來DNS server的大封包都會丟往我要攻擊的對象

@@ -1,0 +1,14 @@
+
+## VLAN hoping
+vlan是同一台switch上的不同隔離網路，正常來說它們各自不能互相溝通，但有一種攻擊方式稱為hop可以達到這件事情，常見的做法有兩種
+
+1.switching spoofing
+->switch 可以自動偵測接上的裝置是不是switch，並且建立trunk connection，正常來說不同VLAN都要用獨立的網路線，但為了方便起見trunk connection就可以同時傳輸不同VLAN的流量，而這個攻擊方式就是利用這點。
+
+攻擊者可以把自己假扮成一台switch，以此跟合法的switch建立trunk連線，這樣一來就可以拿到不同VLAN的流量。
+
+2.double tagging
+->VLAN的frame在傳遞的時候會帶上tag來表達自己從哪來該去哪，攻擊者可以多加一個tag讓frame去到不該去的VLAN，這很適合用來做Dos攻擊，因為他是one way trip的。
+
+## MAC Flooding
+每一台switch都會維護一張Mac table，方便記錄每一個interface對應到哪一個Mac address，而當今天收到一個沒看過的Mac的時候就會把鉈寫進表裡面記錄下來，下次有這個Mac的流量時就可以正確發送，而攻擊者就可以偽造大量不同的Mac來源讓Mac table被塞滿，switch在table找不到Destination的時候就會從所有interface送出去，也就是說switch 就會變成hub，這樣一來攻擊者就可以收到他不該收到的frame
