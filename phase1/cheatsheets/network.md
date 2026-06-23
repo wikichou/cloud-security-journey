@@ -45,3 +45,13 @@
 | tcp.flags.syn==1 && tcp.flags.ack==0 | 只看初始 SYN（排除 SYN-ACK） |
 | ip.addr==192.168.x.x                 | 篩選特定 IP 的所有流量        |
 ...
+## DNS 記錄類型
+
+| 記錄類型 | 用途 |
+|---|---|
+| A | 網域 → IPv4 |
+| AAAA | 網域 → IPv6 |
+| CNAME | 網域別名 |
+| MX | 郵件伺服器 |
+| NS | 權威名稱伺服器 |
+| TXT | 驗證、SPF、DKIM |
