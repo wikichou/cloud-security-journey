@@ -1,0 +1,7 @@
+- Congestion:流量爆炸
+- Bottle neck:網路瓶頸
+- bandwidth usage:頻寬使用量
+- throughput :資料吞吐量
+- latency:延遲
+- packet lost:掉包
+- Jitter : 波動

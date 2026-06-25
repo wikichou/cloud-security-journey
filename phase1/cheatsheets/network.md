@@ -55,3 +55,12 @@
 | MX | 郵件伺服器 |
 | NS | 權威名稱伺服器 |
 | TXT | 驗證、SPF、DKIM |
+## 常見網路攻擊類型
+
+| 攻擊 | 目標層 | 原理 |
+|---|---|---|
+| ARP Poisoning | Layer 2 | 偽造 ARP 回應，污染 ARP cache，攔截流量 |
+| DNS Poisoning | Layer 7 | 偽造 DNS 回應，導向惡意 IP |
+| VLAN Hopping | Layer 2 | 偽造 trunk 封包跨越 VLAN 隔離 |
+| MAC Flooding | Layer 2 | 塞爆 switch 的 MAC table，使其退化成 hub |
+| DDoS | Layer 3/4 | 大量流量癱瘓目標服務 |
