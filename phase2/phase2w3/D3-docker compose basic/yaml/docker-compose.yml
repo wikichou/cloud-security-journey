@@ -1,0 +1,10 @@
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+  echo:
+    image: hashicorp/http-echo
+    command: ["-text=hello from echo"]
+    ports:
+      - "5678:5678"
